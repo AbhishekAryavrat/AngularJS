@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+<body>
+    <div ng-app= "myApp" ng-controller="myCtrl">
+        <select ng-model="selectedCar" ng-options="y.brand for (x,y) in cars">
+        </select>
+        <h1>Selected Car:{{selectedCar.brand}}</h1>
+        <h2>Model:{{selectedCar.model}}</h2>
+        <h3>Color: {{ selectedCar.color}}</h3>
+    </div>
+    <script>
+    var app= angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.cars={
+            car01 : {brand: "Ford", model : "Mustang", color: "Red"},
+            car02 : {brand: "Volvo", model : "007", color: "White"},
+            car03 : {brand: "ALTO", model : "800", color: "Grey"}
+        }
+     
+    });
+    </script>
+
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+<body>
+    <div ng-app= "myApp" ng-controller="myCtrl">
+        <select ng-model="selectedCar" ng-options="x for (x,y) in cars">
+        </select>
+        <h1>Selected Car:{{selectedCar}}</h1>
+     
+    </div>
+    <script>
+    var app= angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.cars={
+            car01 : "Ford",
+            car02 : "Fiat",
+            car03 : "Volvo"
+        }
+     
+    });
+    </script>
+
+</body>
+</html>
+-->
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+<body>
+    <div ng-app= "myApp" ng-controller="myCtrl">
+        <select ng-model="selectedCar" ng-options="x.model for x in cars">
+        </select>
+        <h1>Selected Car:{{selectedCar.model}}</h1>
+        <h1>Color:{{selectedCar.color}}</h1>
+    </div>
+    <script>
+    var app= angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.cars=[
+            {model:"Ford Mustang", color : "Red"},
+            {model:"Toyata", color : "White"},
+            {model:"Volvo", color : "Black"}
+        ];
+    });
+    </script>
+
+</body>
+</html>
+
+-->
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+<body>
+    <div ng-app= "myApp" ng-controller="myCtrl">
+        <select ng-model="selectedCar">
+        <option ng-repeat="x in cars" value="{{x.model}}">{{ x.model }}</option>
+        </select>
+        <h1>Selected Car:{{selectedCar}}</h1>
+    </div>
+    <script>
+    var app= angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.cars=[
+            {model:"Ford Mustang", color : "Red"},
+            {model:"Toyata", color : "White"},
+            {model:"Volvo", color : "Black"}
+        ];
+    });
+    </script>
+
+</body>
+</html>
+-->
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+<body>
+    <div ng-app= "myApp" ng-controller="myCtrl">
+        <select ng-model="selectedName"  ng-options = "x for x in names"></select>
+    </div>
+    <script>
+    var app= angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.names=["Gmail","Facebook", "twitter"];
+    });
+    </script>
+
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+<body>
+    <div ng-app= "myApp" ng-controller="myCtrl">
+        <select>
+        <option ng-repeat="x in names">{{ x }}</option>
+        </select>
+    </div>
+    <script>
+    var app= angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.names=["Gmail","Facebook", "twitter"];
+    });
+    </script>
+
+</body>
+</html>-->

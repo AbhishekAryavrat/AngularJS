@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+	<html>
+		
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	
+		<body ng-app="myApp">
+
+			<!-- <ak-directive></ak-directive>  -->
+			<!-- <w3-test-directive></w3-test-directive> -->
+			<!-- <div class="ak-directive"></div> -->
+			<!--directive: ak-directive-->
+
+			<!--directive: ak-directive -->
+			
+		<script>
+			var app = angular.module("myApp", []);
+			app.directive("akDirective", function()
+			{
+				return{
+					restrict : "M",
+					// restrict : "C",
+					//restrict : "A",
+					replace: true,
+					template : "<h1> Made by a Directive </h1>"
+				};
+			});
+		</script>
+
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+
+<w3-test-directive></w3-test-directive>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : "<h1>Made by a directive!</h1>"
+    };
+});
+</script>
+
+</body>
+</html>
+ -->
+ <!-- <ak-directive></ak-directive>  -->
+			<!-- <w3-test-directive></w3-test-directive> -->
+			<!-- <div class="ak-directive"></div> -->
+
+			<!--directive: ak-directive-->

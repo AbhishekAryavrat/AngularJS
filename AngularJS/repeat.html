@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- <head>
+	<title>Repeat (list)</title> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- </head> -->
+<body>
+<!-- <p>Hello</p>
+	<div ng-app="" ng-init="name=['John','Robert','Thor']">
+		<ul>
+			<li ng-repeat="x in name">
+				{{x}}
+			</li>
+		</ul>
+	</div>
+ -->
+
+
+
+ <p>List</p>
+ <div ng-app="" ng-init="name=[
+	 {name:'John', country:'USA'},
+	 {name:'Robert', country:'LONDON'},
+	 {name:'Thor', country:'ENGLAND'}]">
+	<ul>
+		<li ng-repeat="x in name">
+			{{x.name + " " + x.country}}
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>
