@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="">
+<!-- Checkbox-->
+        <form>
+        Select a topic:
+            <select ng-model="myVar">
+                <option value="">
+                <option value="Cars">Cars
+                <option value="Bikes">Bikes
+                <option value="Cycles">Cycles
+            </select>
+        </form>
+        
+<!--Radio buttons-->
+        <form>
+            Pick a topic:
+            <input type="radio" ng-model="myVar" value="Cars">Cars
+            <input type="radio" ng-model="myVar" value="Bikes">Bikes
+            <input type="radio" ng-model="myVar" value="Cycles">Cycles
+        </form>
+        <div ng-switch="myVar">
+            <div ng-switch-when="Cars">
+                <h1>Cars</h1>
+                <p>Read about cars</p>
+            </div>
+            <div ng-switch-when="Bikes">
+                <h1>Bikes</h1>
+                <p>Read about Bikes</p>
+            </div>
+            <div ng-switch-when="Cycles">
+                <h1>Cycles</h1>
+                <p>Read about Cycles</p>
+            </div>
+        </div>
+    </body>
+</html>
